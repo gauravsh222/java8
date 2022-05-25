@@ -11,6 +11,7 @@ public class TestTree {
         tree.add(12);
         tree.add(17);
         tree.add(25);
+        tree.add(9);
 
         System.out.println(tree.findMin());
         System.out.println(tree.findMinRecursively(tree.getRootNode()));
@@ -18,5 +19,8 @@ public class TestTree {
         System.out.println(tree.findMaxRecursively(tree.getRootNode()));
 
         System.out.println(tree.findHeight());
+
+        // Print tree in Level Order Traversal
+        System.out.println("Level Order Print : " + tree.levelOrderTraversal());
     }
 }

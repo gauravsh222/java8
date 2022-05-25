@@ -2,6 +2,10 @@ package ds.tree;
 
 import lombok.ToString;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringJoiner;
+
 /**
  * Binary Search Tree is the tree which has at most two children and left side element must be smaller than current node
  * and right side element must be greater than current node
@@ -23,6 +27,8 @@ class Node<T> {
 
 public class BinarySearchTree<T extends Comparable<T>> {
     private Node<T> root;
+
+    Queue<Node<T>> queue = new LinkedList<>();
 
     public Node<T> getRootNode() {
         return root;
@@ -101,6 +107,26 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
         }*/
         return 0;
+    }
+
+
+    /**
+     * Level order traversal is also called Breadth first traversal
+     */
+    public String levelOrderTraversal(){
+        queue.add(root);
+        StringJoiner joiner = new StringJoiner(",");
+        while (!queue.isEmpty()) {
+            Node<T> node = queue.poll();
+            joiner.add(String.valueOf(node.data));
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+            if (node.right != null) {
+                queue.add(node.right);
+            }
+        }
+        return joiner.toString();
     }
 
 }

@@ -10,6 +10,7 @@ public class ReadInputFromSTDIN {
             System.out.println("Enter next");
             System.out.println( sc.nextInt());
         }
+
        /* for (int i=0; i<2; i++) {
             System.out.println("Enter next line");
             System.out.println( sc.nextLine());

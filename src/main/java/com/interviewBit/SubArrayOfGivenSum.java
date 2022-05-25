@@ -2,40 +2,19 @@ package com.interviewBit;
 
 public class SubArrayOfGivenSum {
 
+    /** All these approaches does not work if negative values are included in array
+
+        This approach is base on sliding window technique
+
+     */
+
     public static void main(String[] args)
     {
 //        int arr[] = { 15, 2, 4, 8, 9, 5, 10, 23 };
-        int arr[] = { 29, 5, 10, 8, 23 };
+        int arr[] = { 29, 7, 5, 10, 8, 23 };
         int n = arr.length;
         int sum = 23;
         findSubArrays(arr, n, sum);
-//        findSingle(arr, n, sum);
-//        solveEfficient(arr, sum);
-//        solveEfficient(arr, sum);
-    }
-
-    public static void solveEfficient(int[] arr, int target) {
-        int start = 0, end = 0;
-
-        int currSum = 0;
-
-        while (start < arr.length && end <= arr.length) {
-            if (currSum == target) {
-                System.err.println("Efficient starting index : " + start + ", " +
-                        "Ending index : " + (int) (end - 1));
-                if (end <= arr.length - 1) {
-                    currSum += arr[end];
-                }
-                end++;
-            }
-            else {
-                if (currSum > target) {
-                    currSum -= arr[start++];
-                } else {
-                    currSum += arr[end++];
-                }
-            }
-        }
     }
 
     private static void findSubArrays(int[] arr, int n, int sum) {

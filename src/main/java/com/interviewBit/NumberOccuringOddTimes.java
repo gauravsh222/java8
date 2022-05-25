@@ -12,6 +12,7 @@ public class NumberOccuringOddTimes {
         int result = 0;
         for (i = 0; i < arr.length; i++)
         {
+
             result = result ^ arr[i];
         }
         return result;

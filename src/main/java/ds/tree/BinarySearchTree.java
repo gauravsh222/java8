@@ -92,7 +92,14 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     public int findHeight() {
+        findLeftHeightOfRoot();
+        return 0;
+    }
 
+    private int findLeftHeightOfRoot() {
+       /* while () {
+
+        }*/
         return 0;
     }
 

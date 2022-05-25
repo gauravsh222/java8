@@ -16,5 +16,7 @@ public class TestTree {
         System.out.println(tree.findMinRecursively(tree.getRootNode()));
         System.out.println(tree.findMax());
         System.out.println(tree.findMaxRecursively(tree.getRootNode()));
+
+        System.out.println(tree.findHeight());
     }
 }

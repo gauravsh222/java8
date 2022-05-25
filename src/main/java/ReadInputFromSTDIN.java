@@ -20,5 +20,6 @@ public class ReadInputFromSTDIN {
             System.out.println("Enter next");
             System.out.println( sc.next());
         }
+
     }
 }

@@ -7,7 +7,7 @@ public class ReadInputFromSTDIN {
         Scanner sc = new Scanner(System.in);
 
         for (int i=0; i<5; i++) {
-            System.out.println("Enter next");
+            System.out.println("Enter nextInt");
             System.out.println( sc.nextInt());
         }
 

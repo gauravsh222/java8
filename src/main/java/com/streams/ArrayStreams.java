@@ -185,7 +185,7 @@ public class ArrayStreams {
         employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.mapping(Employee::getSalary, Collectors.toList())))
                 .forEach((key, val)-> System.out.println(key + " : " + val));
 
-        System.out.println("--------------Employees Statisticcs By Department-------------------");
+        System.out.println("--------------Employees Statistics By Department-------------------");
         Map<String, DoubleSummaryStatistics> summaryStatisticsMap = employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment,
                                                                                                                             Collectors.summarizingDouble(Employee::getSalary)));
         summaryStatisticsMap.forEach((key, val)-> {
